@@ -21,8 +21,8 @@ function myView() {
             loadAPIItem(viewData);
             break;
 
-        // Se é 'owners', chama a função 'loadAPIOwner()';
-        case 'owners':
+        // Se é 'owner', chama a função 'loadAPIOwner()';
+        case 'owner':
             loadAPIOwner(viewData);
             break;
     }
@@ -74,7 +74,7 @@ function loadAPIItem(viewData) {
             // Refatora viewData para obter o proprietário.
             viewData = {
                 "origin": "view",
-                "collection": "owners",
+                "collection": "owner",
                 "id": getData.owner
             }
 
@@ -104,7 +104,7 @@ function loadAPIItem(viewData) {
 function loadAPIOwner(viewData) {
 
     // Monta URL da requisição.
-    requestURL = `${app.apiBaseURL}/owners/${viewData.id}`;
+    requestURL = `${app.apiBaseURL}/owner/${viewData.id}`;
 
     // Debug: mostra URL da requisição.
     console.log('Request URL:', requestURL);
@@ -168,7 +168,7 @@ function loadAPIOwner(viewData) {
 function getAllItemsFromOwner(ownerId) {
 
     // Monta URL da requisição.
-    requestURL = `${app.apiBaseURL}/owners/items/${ownerId}`;
+    requestURL = `${app.apiBaseURL}/owner/items/${ownerId}`;
 
     // Debug: URL da requisição.
     console.log(requestURL);

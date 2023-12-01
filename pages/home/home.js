@@ -14,7 +14,7 @@ function myHome() {
     getAll('/items', '#tableItem');
 
     // Obtém todos os 'owner'.
-    getAll('/owners', '#tableOwner');
+    getAll('/owner', '#tableOwner');
 
     // Conclui sem fazer mais nada.
     return false;
